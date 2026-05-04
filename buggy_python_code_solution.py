@@ -3,6 +3,7 @@ import os
 import yaml
 import flask
 
+
 app = flask.Flask(__name__)
 
 
@@ -15,6 +16,7 @@ def index():
 
 CONFIG = {"API_KEY": "771df488714111d39138eb60df756e6b"}
 class Person:
+    """man"""
     def __init__(self, name):
         self.name = name
 
@@ -53,7 +55,7 @@ if __name__ == '__main__':
     print("3. Yaml deserialization vulnerability: see file_solution.yaml for a solution")
     print("4. Use of assert statements vulnerability: run program with -O argument")
     choice  = input("Select vulnerability: ")
-    if choice == "1": 
+    if choice == "1":
         new_person = Person("Vickie")  
         print_nametag(input("Please format your nametag: "), new_person)
     elif choice == "2":
